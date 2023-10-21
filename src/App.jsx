@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Hero } from "./components";
 import "./App.css";
+import Homepage from "./components/Homepage";
 
 function App() {
   return (
     <>
-      <Hero />
+      <Homepage />
     </>
   );
 }
