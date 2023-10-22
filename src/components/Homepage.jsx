@@ -1,11 +1,22 @@
 import React from "react";
-import { Hero } from "./";
+import {
+  Featured,
+  Footer,
+  Hero,
+  Navbar,
+  PopularSales,
+  TopRatedSales,
+} from "./";
 
 const Homepage = () => {
   return (
     <>
       <div>
         <Hero />
+        <PopularSales />
+        <TopRatedSales />
+        <Featured />
+        <Footer />
       </div>
     </>
   );

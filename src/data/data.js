@@ -369,7 +369,7 @@ const footerAPI = {
       { link: "Promotions" },
       { link: "Find A Store" },
       { link: "Signup" },
-      { link: "Nike Jouneral" },
+      { link: "Nike Jounral" },
       { link: "Send Us Feeback" },
     ],
   ],
