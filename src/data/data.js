@@ -34,7 +34,7 @@ import messenger from "../assets/messenger.svg";
 const heroapi = {
   title: "Play With Electric Nike",
   subtitle: "Adapt 2.0 Sneakers",
-  img: heroimg,
+  img: sneakershoe,
   btntext: "Explore Product",
   videos: [
     { imgsrc: vcover1, clip: clip },
