@@ -11,8 +11,8 @@ import {
 const Homepage = () => {
   return (
     <>
-      <div>
-        <Hero />
+      <Hero />
+      <div className="px-6">
         <PopularSales />
         <TopRatedSales />
         <Featured />
