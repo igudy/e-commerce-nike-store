@@ -13,6 +13,15 @@ const Hero = () => {
               <p className="">{heroapi.title}</p>
               <p className="">{heroapi.subtitle}</p>
             </div>
+
+            <div>
+              {heroapi.sociallinks?.map((item) => (
+                <>
+                  <img className="w-8 h-8" src={item.icon} alt={item.icon} />
+                </>
+              ))}
+            </div>
+
             <div className="">
               <button className="bg-slate-100 my-8 w-[200px] h-12 shadow-xl rounded-3xl align-center cursor-pointer hover:bg-slate-200">
                 {heroapi.btntext}

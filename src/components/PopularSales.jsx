@@ -10,7 +10,7 @@ const PopularSales = () => {
         {popularsales.title}
       </p>
 
-      <div className="flex sm:flex-col xsm:flex-col md:flex-col sm:justify-start  md:justify-start justify-center lg:items-center gap-5 xl:gap-5 lg:gap-4 md:gap-8">
+      <div className="flex sm:flex-col xsm:flex-col md:flex-col sm:justify-start  md:justify-start justify-center lg:items-center gap-5 xl:gap-5 lg:gap-4 md:gap-3">
         {popularsales?.items?.map((item) => (
           <div key={item.id} className="text-white">
             <div
@@ -18,7 +18,7 @@ const PopularSales = () => {
             >
               <div className="flex justify-between px-1 sm:px-2 xsm:px-2">
                 <div>
-                  <p className="font-bold sm:text-sm xsm:text-sm md:text-xl my-2">
+                  <p className="font-bold sm:text-sm xsm:text-sm md:text-2xl my-2">
                     {item.title}
                   </p>
                   <p className="text-xs my-1">{item.text}</p>
@@ -47,7 +47,7 @@ const PopularSales = () => {
                   <img
                     src={item.img}
                     alt={`${item.title}`}
-                    className="h-[20vh] sm:h-[10vh] md:h-[21vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill"
+                    className="h-[20vh] sm:h-[12vh] md:h-[20vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill"
                   />
                 </div>
               </div>
