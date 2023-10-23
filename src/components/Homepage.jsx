@@ -12,7 +12,7 @@ const Homepage = () => {
   return (
     <>
       <Hero />
-      <div className="px-6">
+      <div className="px-6 sm:px-2 xsm:px-1">
         <PopularSales />
         <TopRatedSales />
         <Featured />
