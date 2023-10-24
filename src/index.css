@@ -45,7 +45,7 @@
   /* Clip-path */
   .clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
-    z-index: -99999;
+    z-index: 0;
     position: relative;
   }  
   
