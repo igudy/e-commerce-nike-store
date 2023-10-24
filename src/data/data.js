@@ -107,7 +107,7 @@ const sneaker = {
   img: sneakershoe,
 };
 
-const toprateslaes = {
+const topratesales = {
   title: "Top Rated Sales",
   items: [
     {
