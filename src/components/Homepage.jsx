@@ -3,7 +3,7 @@ import {
   Featured,
   Footer,
   Hero,
-  Navbar,
+  Highlights,
   PopularSales,
   TopRatedSales,
 } from "./";
@@ -12,8 +12,9 @@ const Homepage = () => {
   return (
     <>
       <Hero />
-      <div className="px-6 sm:px-2 xsm:px-1">
+      <div className="mx-6 sm:mx-4 xsm:mx-2">
         <PopularSales />
+        <Highlights />
         <TopRatedSales />
         <Featured />
         <Footer />
