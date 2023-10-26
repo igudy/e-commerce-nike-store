@@ -92,10 +92,19 @@ const popularsales = {
 const highlight = {
   heading: "HIGHLIGHTS",
   title: "NIKE AIR WITH LIMITLESS CHOICES",
-  text: "Our Purpose is to move the world forward. We take action by building community, protecting our planet and increasing access to sport.",
+  text: "The radiance lives on Nike Sneakers Air Lancing Shoes, the basket ball OG that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.",
   btn: "Explore More",
   url: "https://www.nike.com/launch/t/nocta-hot-step-black-gold",
   img: hightlightimg,
+};
+
+const featured = {
+  heading: "FEATURED",
+  title: "NIKE AIR WITH AIR LANCES CHOICES",
+  text: "Our Purpose is to move the world forward. We take action by building community, protecting our planet and increasing access to sport.",
+  btn: "Explore More",
+  url: "https://www.nike.com/launch/t/nocta-hot-step-black-gold",
+  img: heroimg,
 };
 
 const sneaker = {
@@ -107,7 +116,7 @@ const sneaker = {
   img: sneakershoe,
 };
 
-const topratesales = {
+const topratedsales = {
   title: "Top Rated Sales",
   items: [
     {
@@ -381,6 +390,7 @@ export {
   story,
   sneaker,
   highlight,
-  toprateslaes,
+  featured,
+  topratedsales,
   popularsales,
 };

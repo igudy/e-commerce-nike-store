@@ -6,6 +6,7 @@ import {
   Highlights,
   PopularSales,
   TopRatedSales,
+  TopStories,
 } from "./";
 
 const Homepage = () => {
@@ -17,6 +18,7 @@ const Homepage = () => {
         <Highlights />
         <TopRatedSales />
         <Featured />
+        <TopStories />
         <Footer />
       </div>
     </>

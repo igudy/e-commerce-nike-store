@@ -1,5 +1,6 @@
 import { AiFillStar } from "react-icons/ai";
 import { BsFillCartCheckFill } from "react-icons/bs";
+import PropTypes from "prop-types";
 
 const ProductCards = ({
   title,
@@ -12,36 +13,60 @@ const ProductCards = ({
   shadow,
 }) => {
   return (
-    <div className="flex flex-wrap text-black">
+    <>
       <div
-        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-start rounded-xl py-3 px-2 transition-all duration-700 ease-in-out w-full hover:scale-105`}
+        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-start rounded-xl xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out gap-3  h-60 xsm:h-60 sm:h-[200px] md:w-[270px] w-[350px] sm:w-full sm:max-w-full xsm:w-full hover:scale-105 text-white sm:my-[0.5px]`}
       >
-        <p>{title}</p>
-        <p>{text}</p>
-        <div className="flex gap-2 my-2">
-          <p className="font-bold sm:text-sm xsm:text-sm lg:font-bold xl:font-bold md:font-bold md:text-xl lg:text-lg">
-            ${price}
-          </p>
-          <span className="bg-slate-200 w-12 sm:w-8 md:w-16 lg:w-10 rounded-lg drop-shadow-xl text-black">
-            <p className="flex text font-medium sm:text-sm justify-center items-center md:font-bold md:text-md md:mt-[2px]">
-              {rating} <AiFillStar className="text-yellow-500" />
-            </p>
-          </span>
-        </div>
-        <div className="flex items-center">
-          <div className="border-[2px] w-7 h-6 cursor-pointer rounded-full drop-shadow-xl text-inherit items-center">
-            <span className="flex text-center items-center justify-center">
-              <BsFillCartCheckFill className="pt-1" />
-            </span>
+        <div
+          className="flex flex-row
+        "
+        >
+          <div>
+            <p className="xsm:font-sm xsm:font-bold font-bold">{title}</p>
+            <p>{text}</p>
+            <div className="flex gap-2 my-2">
+              <p className="font-bold sm:text-sm xsm:text-sm lg:font-bold xl:font-bold md:font-bold md:text-xl lg:text-lg cursor-pointer">
+                ${price}
+              </p>
+              <span className="bg-slate-200 w-12 sm:w-8 md:w-16 lg:w-10 rounded-lg drop-shadow-xl text-black cursor-pointer">
+                <p className="flex text font-medium sm:text-sm justify-center items-center md:font-bold md:text-md md:mt-[2px] cursor-pointer">
+                  {rating} <AiFillStar className="text-yellow-500" />
+                </p>
+              </span>
+            </div>
+            <div className="flex items-center">
+              <div className="border-[2px] w-7 h-6 cursor-pointer rounded-full drop-shadow-xl mr-[2px] text-inherit items-center">
+                <span className="flex text-center items-center justify-center">
+                  <BsFillCartCheckFill className="pt-1" />
+                </span>
+              </div>
+              <span className="mt-1 pl-2 xl:text-md text-sm shadow-md cursor-pointer bg-slate-200 text-black rounded-lg px-2 mx-[0.5px]">
+                {btn}
+              </span>
+            </div>
           </div>
-          <span className="mt-1 pl-2 xl:text-md text-sm shadow-md cursor-pointer">
-            {btn}
-          </span>
+          <div>
+            <img
+              src={img}
+              alt={title}
+              className="h-[20vh] sm:h-[10vh] md:h-[20vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill xsm:ml-2 sm:ml-2 sm:mt-4 xsm:mt-12"
+            />
+          </div>
         </div>
-        <img src={img} alt={title} />
       </div>
-    </div>
+    </>
   );
+};
+
+ProductCards.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
+  btn: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  shadow: PropTypes.string.isRequired,
 };
 
 export default ProductCards;

@@ -1,15 +1,15 @@
 import React from "react";
-import { topratesales } from "../data/data";
+import { topratedsales } from "../data/data";
 import ProductCards from "./sub-components/ProductCards";
 
 const TopRatedSales = () => {
   return (
     <div>
       <p className="relative text-5xl sm:text-4xl sm:mb-2 font-extrabold my-10">
-        {topratesales.title}
+        {topratedsales.title}
       </p>
-      <div>
-        {topratesales.items((item) => (
+      <div className="flex flex-wrap gap-5">
+        {topratedsales?.items?.map((item) => (
           <div className="" key={item.id}>
             <ProductCards
               title={item.title}
