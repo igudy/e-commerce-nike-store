@@ -19,8 +19,8 @@ const Homepage = () => {
         <TopRatedSales />
         <Featured />
         <TopStories />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

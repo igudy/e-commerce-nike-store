@@ -31,6 +31,11 @@ import twitter from "../assets/twitter.svg";
 import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+
 const heroapi = {
   title: "Play With Electric Nike",
   subtitle: "Adapt 2.0 Sneakers",
@@ -380,6 +385,24 @@ const footerAPI = {
       { link: "Signup" },
       { link: "Nike Jounral" },
       { link: "Send Us Feeback" },
+    ],
+    [
+      {
+        icon: <FaInstagram />,
+        link: "www.instagram.com/igudy_dev",
+      },
+      {
+        icon: <FaTwitter />,
+        link: "www.twitter.com/igudy_dev",
+      },
+      {
+        icon: <FaFacebook />,
+        link: "www.facebook.com",
+      },
+      {
+        icon: <FaLinkedin />,
+        link: "www.linkedin.com",
+      },
     ],
   ],
 };
