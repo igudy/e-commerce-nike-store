@@ -47,7 +47,7 @@ const TopStories = () => {
           }}
           navigation
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true, dragSize: "20px" }}
+          scrollbar={{ draggable: true }}
         >
           {story?.news?.map((item, i) => (
             <SwiperSlide key={i} className="flex cursor-pointer">

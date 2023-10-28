@@ -17,8 +17,8 @@ const Homepage = () => {
         <PopularSales />
         <Highlights />
         <TopRatedSales />
-        {/* <Featured />
-        <TopStories /> */}
+        <Featured />
+        <TopStories />
       </div>
       {/* <Footer /> */}
     </>
