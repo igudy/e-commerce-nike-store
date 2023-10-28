@@ -8,7 +8,7 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row relative justify-between items-center px-8 py-8">
+    <div className="flex flex-row relative justify-between items-center mx-16 py-8 xsm:mx-2 xsm:py-6 sm:mx-2 sm:py-8 md:mx-8 md:py-8">
       <div className="">
         <img src={logo} className="w-20 h-6" alt="logo" />
       </div>

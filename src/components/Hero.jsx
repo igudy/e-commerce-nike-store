@@ -14,7 +14,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between mx-5 sm:mt-[-300px] xsm:mt-[-300px] mt-[-250px]">
+      <div className="flex justify-between mx-10 xsm:mx-2 sm:mx-5 md:mx-5 sm:mt-[-300px] xsm:mt-[-300px] mt-[-250px]">
         <div className="left-0 cursor-pointer z-10">
           {heroapi.videos?.map((item, i) => (
             <div className="my-3" key={i}>
