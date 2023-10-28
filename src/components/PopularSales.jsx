@@ -10,11 +10,11 @@ const PopularSales = () => {
         {popularsales.title}
       </p>
 
-      <div className="flex sm:flex-col xsm:flex-col md:flex-col    xl:gap-5 lg:gap-5 md:gap-10 gap-5">
+      <div className="flex sm:flex-col xsm:flex-col md:flex-col    xl:gap-5 lg:gap-5 sm:gap-4 md:gap-10 gap-5">
         {popularsales?.items?.map((item) => (
           <div key={item.id} className="text-white">
             <div
-              className={`relative bg-gradient-to-b ${item.color} ${item.shadow} grid items-center justify-items-start rounded-xl py-3 px-2 transition-all duration-700 ease-in-out w-full hover:scale-105`}
+              className={`relative bg-gradient-to-b ${item.color} ${item.shadow} grid items-center justify-items-start rounded-xl py-3 px-2 transition-all duration-700 ease-in-out w-full hover:scale-90`}
             >
               <div className="flex justify-between px-1 sm:px-2 xsm:px-2">
                 <div>
@@ -47,7 +47,7 @@ const PopularSales = () => {
                   <img
                     src={item.img}
                     alt={`${item.title}`}
-                    className="h-[20vh] sm:h-[12vh] md:h-[20vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill"
+                    className="h-[20vh] xsm:h-[10vh] xsm:mt-5 sm:h-[20vh] md:h-[20vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill"
                   />
                 </div>
               </div>

@@ -13,14 +13,14 @@ const Homepage = () => {
   return (
     <>
       <Hero />
-      {/* <div className="mx-6 sm:mx-4 xsm:mx-2">
+      <div className="mx-6 sm:mx-2 xsm:mx-1">
         <PopularSales />
-        <Highlights />
+        {/* <Highlights />
         <TopRatedSales />
         <Featured />
-        <TopStories />
+        <TopStories /> */}
       </div>
-      <Footer /> */}
+      {/* <Footer /> */}
     </>
   );
 };
