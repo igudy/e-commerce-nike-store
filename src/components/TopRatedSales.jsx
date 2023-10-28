@@ -8,7 +8,7 @@ const TopRatedSales = () => {
       <p className="relative text-5xl sm:text-4xl sm:mb-2 font-extrabold my-10">
         {topratedsales.title}
       </p>
-      <div className="flex flex-wrap gap-5">
+      <div className="flex flex-wrap gap-3 w-full">
         {topratedsales?.items?.map((item) => (
           <div className="" key={item.id}>
             <ProductCards

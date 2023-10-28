@@ -15,12 +15,9 @@ const ProductCards = ({
   return (
     <>
       <div
-        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-start rounded-xl xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out gap-3  h-60 xsm:h-60 sm:h-[200px] md:w-[270px] w-[350px] sm:w-full sm:max-w-full xsm:w-full hover:scale-105 text-white sm:my-[0.5px]`}
+        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-start rounded-xl xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out hover:scale-95 text-white sm:my-[0.5px]`}
       >
-        <div
-          className="flex flex-row
-        "
-        >
+        <div className="flex flex-row">
           <div>
             <p className="xsm:font-sm xsm:font-bold font-bold">{title}</p>
             <p>{text}</p>

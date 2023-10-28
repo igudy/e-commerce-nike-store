@@ -13,11 +13,11 @@ const Homepage = () => {
   return (
     <>
       <Hero />
-      <div className="mx-16 sm:mx-2 xsm:mx-1 md:mx-5">
+      <div className="mx-14 sm:mx-2 xsm:mx-1 md:mx-5">
         <PopularSales />
         <Highlights />
-        {/* <TopRatedSales />
-        <Featured />
+        <TopRatedSales />
+        {/* <Featured />
         <TopStories /> */}
       </div>
       {/* <Footer /> */}
