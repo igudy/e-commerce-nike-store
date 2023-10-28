@@ -1,5 +1,6 @@
 import React from "react";
 import { footerAPI } from "../data/data";
+import SocialIcons from "./sub-components/SocialIcons";
 
 const Footer = () => {
   return (
@@ -38,16 +39,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* <div>
-          <p className="font-bold">Follow Us</p>
-          {footerAPI?.links[3]?.map((item, i) => (
-            <p className="" key={i}>
-              <a className="" href={item.link}>
-                {item.icon}
-              </a>
-            </p>
-          ))}
-        </div> */}
+        <div>
+          <SocialIcons />
+        </div>
       </div>
     </div>
   );
