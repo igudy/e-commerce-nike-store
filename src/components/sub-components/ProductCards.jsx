@@ -46,7 +46,7 @@ const ProductCards = ({
             <img
               src={img}
               alt={title}
-              className="h-[16vh] sm:h-[13vh] xsm:h-[13vh] md:h-[20vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill xsm:ml-2 sm:ml-2 sm:mt-4 xsm:mt-4"
+              className="h-[16vh] sm:h-[13vh] xsm:h-[13vh] md:h-[13vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill xsm:ml-2 sm:ml-2 sm:mt-4 xsm:mt-4"
             />
           </div>
         </div>
