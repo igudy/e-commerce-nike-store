@@ -8,21 +8,24 @@ const TopRatedSales = () => {
       <p className="relative text-5xl sm:text-4xl sm:mb-2 font-extrabold my-10">
         {topratedsales.title}
       </p>
-      <div className="flex flex-wrap gap-3 w-full">
-        {topratedsales?.items?.map((item) => (
-          <div className="" key={item.id}>
-            <ProductCards
-              title={item.title}
-              text={item.text}
-              rating={item.rating}
-              btn={item.btn}
-              img={item.img}
-              price={item.price}
-              color={item.color}
-              shadow={item.shadow}
-            />
-          </div>
-        ))}
+      {/* <div className="flex flex-wrap gap-3 w-full"> */}
+      <div className="max-w-screen-xl mx-auto">
+        <div className="grid md:grid-cols-2 sm:grid-cols-1 xsm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 grid-cols-4 gap-4">
+          {topratedsales?.items?.map((item) => (
+            <div className="" key={item.id}>
+              <ProductCards
+                title={item.title}
+                text={item.text}
+                rating={item.rating}
+                btn={item.btn}
+                img={item.img}
+                price={item.price}
+                color={item.color}
+                shadow={item.shadow}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

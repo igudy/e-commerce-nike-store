@@ -15,10 +15,10 @@ const ProductCards = ({
   return (
     <>
       <div
-        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-start rounded-xl xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out hover:scale-95 text-white sm:my-[0.5px]`}
+        className={`relative bg-gradient-to-b ${color} ${shadow} rounded-xl py-2 xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out hover:scale-95 h-[210px] xsm:h-[200px] text-white sm:my-[0.5px] shadow-lg`}
       >
-        <div className="flex flex-row">
-          <div>
+        <div className="flex flex-row sm:mt-5 mt-4">
+          <div className="">
             <p className="xsm:font-sm xsm:font-bold font-bold">{title}</p>
             <p>{text}</p>
             <div className="flex gap-2 my-2">
@@ -37,16 +37,16 @@ const ProductCards = ({
                   <BsFillCartCheckFill className="pt-1" />
                 </span>
               </div>
-              <span className="mt-1 pl-2 xl:text-md text-sm shadow-md cursor-pointer bg-slate-200 text-black rounded-lg px-2 mx-[0.5px]">
-                {btn}
+              <span className="mt-1 pl-2 xl:text-md text-sm shadow-md cursor-pointer w-full bg-slate-200 text-black rounded-lg px-2 mx-[0.5px]">
+                <p className="text-center">{btn}</p>
               </span>
             </div>
           </div>
-          <div>
+          <div className="basis-[70%]">
             <img
               src={img}
               alt={title}
-              className="h-[20vh] sm:h-[10vh] md:h-[20vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill xsm:ml-2 sm:ml-2 sm:mt-4 xsm:mt-12"
+              className="h-[16vh] sm:h-[13vh] xsm:h-[13vh] md:h-[20vh] lg:h-[12vh] w-auto transitions-theme -rotate-[15deg] hover:rotate-0 cursor-pointer object-fill xsm:ml-2 sm:ml-2 sm:mt-4 xsm:mt-4"
             />
           </div>
         </div>
