@@ -8,7 +8,7 @@ import logo from "../assets/logo.png";
 import CartModal from "./modal/CartModal";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const closeModal = () => {
     setIsOpen(false);

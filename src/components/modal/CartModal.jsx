@@ -2,8 +2,8 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { IoArrowBackOutline } from "react-icons/io5";
-import ShoppingBag from "../../../assets/emptybag.png";
 import { AiFillCloseCircle, AiFillCloseSquare } from "react-icons/ai";
+import CartEmpty from "./CartEmpty";
 
 const CartModal = ({ openModal, closeModal, isOpen }) => {
   return (
@@ -13,7 +13,6 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
         onClick={openModal}
         className="w-8 h-6 cursor-pointer"
       />
-
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-[999]" onClose={closeModal}>
           <Transition.Child
@@ -27,7 +26,6 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
           >
             <div className="fixed inset-0 opacity-80 bg-slate-100" />
           </Transition.Child>
-
           <div className="fixed top-0 right-0 xsm:w-[100%] sm:w-[100%] md:w-[100%] w-[50%]">
             <div className="">
               <Transition.Child
@@ -73,13 +71,8 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                       </div>
                     </p>{" "}
                     {/* Cart Section */}
-                    <div className="">
-                      <img
-                        src={ShoppingBag}
-                        className="flex justify-center text-center mx-auto mt-8 opacity-60 w-[40%] h-[40%]"
-                        alt="shopping_bag"
-                      />
-                    </div>
+                    {/* Empty cart */}
+                    <CartEmpty />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
