@@ -29,19 +29,19 @@ const TopStories = () => {
           breakpoints={{
             375: {
               slidesPerView: 1,
-              spaceBetween: 30,
+              spaceBetween: 10,
             },
             550: {
-              slidesPerView: 1,
-              spaceBetween: 30,
+              slidesPerView: 2,
+              spaceBetween: 10,
             },
             767: {
-              slidesPerView: 1,
-              spaceBetween: 30,
+              slidesPerView: 2,
+              spaceBetween: 10,
             },
             991: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 20,
             },
             1200: {
               slidesPerView: 4,
