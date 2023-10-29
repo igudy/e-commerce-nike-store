@@ -1,7 +1,10 @@
 import React from "react";
 import { story } from "../data/data";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/scrollbar";
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,36 +21,33 @@ const TopStories = () => {
       </p>
       <div>
         <Swiper
+          spaceBetween={10}
+          slidesPerView={2.3}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          scrollbar={{ draggable: true }}
           breakpoints={{
             375: {
-              width: 375,
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 30,
             },
             550: {
-              width: 550,
-              slidesPerView: 2,
+              slidesPerView: 1.5,
               spaceBetween: 30,
             },
             767: {
-              width: 767,
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 30,
             },
             991: {
-              width: 991,
-              slidesPerView: 5,
+              slidesPerView: 3,
               spaceBetween: 30,
             },
             1200: {
-              width: 1200,
-              slidesPerView: 5,
+              slidesPerView: 4,
               spaceBetween: 30,
             },
           }}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
         >
           {story?.news?.map((item, i) => (
             <SwiperSlide key={i} className="flex cursor-pointer">
