@@ -5,7 +5,7 @@ import {
   ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
-import CartModal from "./sub-components/cart/CartModal";
+import CartModal from "./modal/CartModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

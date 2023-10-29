@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { IoArrowBackOutline } from "react-icons/io5";
+import ShoppingBag from "../../../assets/emptybag.png";
 import { AiFillCloseCircle, AiFillCloseSquare } from "react-icons/ai";
 
 const CartModal = ({ openModal, closeModal, isOpen }) => {
@@ -73,7 +74,11 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                     </p>{" "}
                     {/* Cart Section */}
                     <div className="">
-                      <p>Hello</p>
+                      <img
+                        src={ShoppingBag}
+                        className="flex justify-center text-center mx-auto mt-8 opacity-60 w-[40%] h-[40%]"
+                        alt="shopping_bag"
+                      />
                     </div>
                   </div>
                 </Dialog.Panel>
