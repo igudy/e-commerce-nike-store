@@ -50,7 +50,7 @@ const TopStories = () => {
           }}
         >
           {story?.news?.map((item, i) => (
-            <SwiperSlide key={i} className="flex cursor-pointer">
+            <SwiperSlide key={i} className="flex justify-center cursor-pointer">
               <StoriesCard
                 title={item.title}
                 text={item.text}
