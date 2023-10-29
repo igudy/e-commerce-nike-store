@@ -22,7 +22,7 @@ const TopStories = () => {
       <div>
         <Swiper
           spaceBetween={10}
-          slidesPerView={2.3}
+          slidesPerView={1}
           navigation={true}
           modules={[Pagination, Navigation]}
           scrollbar={{ draggable: true }}
@@ -32,11 +32,11 @@ const TopStories = () => {
               spaceBetween: 30,
             },
             550: {
-              slidesPerView: 1.5,
+              slidesPerView: 1,
               spaceBetween: 30,
             },
             767: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 30,
             },
             991: {

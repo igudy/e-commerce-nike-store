@@ -20,7 +20,7 @@ const Homepage = () => {
         <Featured />
         <TopStories />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
