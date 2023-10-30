@@ -29,6 +29,7 @@ const cartSlice = createSlice({
         state.cartItems[itemIndex].cartQuantity += 1;
         toast.success(`Item QTY Increased`);
       } else {
+        // cartQuantity added for the first time here
         const temp = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(temp);
         toast.success(`${action.payload.title} added to Cart`, {
@@ -36,6 +37,7 @@ const cartSlice = createSlice({
         });
       }
     },
+
     setRemoveItemFromCart: (state, action) => {},
     setIncreaseItemQuantity: (state, action) => {},
     setDecreaseItemQuantity: (state, action) => {},

@@ -10,7 +10,7 @@ const Footer = () => {
           <p className="font-bold">{footerAPI?.titles[0]?.title}</p>
           <div>
             {footerAPI?.links[0]?.map((item, i) => (
-              <p className="my-1" key={i}>
+              <p className="my-1 cursor-pointer hover:underline" key={i}>
                 {item.link}
               </p>
             ))}
@@ -21,7 +21,7 @@ const Footer = () => {
           <p className="font-bold">{footerAPI?.titles[1]?.title}</p>
           <div>
             {footerAPI?.links[1]?.map((item, i) => (
-              <p className="my-1" key={i}>
+              <p className="my-1 cursor-pointer hover:underline" key={i}>
                 {item.link}
               </p>
             ))}
@@ -32,7 +32,7 @@ const Footer = () => {
           <p className="font-bold">{footerAPI?.titles[2]?.title}</p>
           <div>
             {footerAPI?.links[2]?.map((item, i) => (
-              <p className="my-1" key={i}>
+              <p className="my-1 cursor-pointer hover:underline" key={i}>
                 {item.link}
               </p>
             ))}
