@@ -13,6 +13,7 @@ const TopRatedSales = () => {
           {topratedsales?.items?.map((item) => (
             <div className="" key={item.id}>
               <ProductCards
+                id={item.id}
                 title={item.title}
                 text={item.text}
                 rating={item.rating}

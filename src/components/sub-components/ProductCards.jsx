@@ -1,8 +1,11 @@
 import { AiFillStar } from "react-icons/ai";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { setAddItemToCart } from "../redux/slices/CartSlice";
 
 const ProductCards = ({
+  id,
   title,
   text,
   rating,
@@ -12,6 +15,12 @@ const ProductCards = ({
   color,
   shadow,
 }) => {
+  const dispatch = useDispatch();
+
+  const addTocart = () => {
+    const temp = { id, title, text, rating, btn, img, price, color, shadow };
+    dispatch(setAddItemToCart(temp));
+  };
   return (
     <>
       <div
@@ -38,7 +47,9 @@ const ProductCards = ({
                 </span>
               </div>
               <span className="mt-1 pl-2 xl:text-md text-sm shadow-md cursor-pointer w-full bg-slate-200 text-black rounded-lg px-2 mx-[0.5px]">
-                <p className="text-center">{btn}</p>
+                <p className="text-center" onClick={() => addTocart()}>
+                  {btn}
+                </p>
               </span>
             </div>
           </div>
