@@ -4,6 +4,7 @@ import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { IoArrowBackOutline } from "react-icons/io5";
 import { AiFillCloseCircle, AiFillCloseSquare } from "react-icons/ai";
 import CartEmpty from "./CartEmpty";
+import CartItems from "./CartItems";
 
 const CartModal = ({ openModal, closeModal, isOpen }) => {
   return (
@@ -72,7 +73,10 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                     </p>{" "}
                     {/* Cart Section */}
                     {/* Empty cart */}
-                    <CartEmpty />
+                    <div className="mt-8 ">
+                      {/* <CartEmpty /> */}
+                      <CartItems />
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
