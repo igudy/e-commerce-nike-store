@@ -27,15 +27,17 @@ const cartSlice = createSlice({
 
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
+
         toast.success(`Item QTY Increased`);
       } else {
-        // cartQuantity added for the first time here
+        // Declaring cartquantity for the first time
         const temp = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(temp);
-        toast.success(`${action.payload.title} added to Cart`, {
-          position: "top-left",
-        });
+
+        toast.success(`${action.payload.title} added to Cart`);
       }
+
+      localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
 
     setRemoveItemFromCart: (state, action) => {},
@@ -54,5 +56,8 @@ export const {
   setClearItems,
   setGetTotalAmount,
 } = cartSlice.actions;
+
+// this cart below is not the name, its the cart in the store
+export const selectCartItems = (state) => state.cart.cartItems;
 
 export default cartSlice.reducer;

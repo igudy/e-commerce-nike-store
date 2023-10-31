@@ -1,12 +1,16 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { IoArrowBackOutline } from "react-icons/io5";
-import { AiFillCloseCircle, AiFillCloseSquare } from "react-icons/ai";
 import CartEmpty from "./CartEmpty";
 import CartItems from "./CartItems";
+import { useSelector } from "react-redux";
+import { selectCartItems } from "../redux/slices/CartSlice";
 
 const CartModal = ({ openModal, closeModal, isOpen }) => {
+  const cartItems = useSelector(selectCartItems);
+  console.log(cartItems);
+
   return (
     <>
       <ShoppingBagIcon
@@ -74,8 +78,13 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                     {/* Cart Section */}
                     {/* Empty cart */}
                     <div className="mt-8 ">
-                      {/* <CartEmpty /> */}
-                      <CartItems />
+                      {cartItems?.length === 0 ? (
+                        <CartEmpty />
+                      ) : (
+                        cartItems?.map((item, i) => (
+                          <CartItems key={i} item={item} />
+                        ))
+                      )}
                     </div>
                   </div>
                 </Dialog.Panel>
