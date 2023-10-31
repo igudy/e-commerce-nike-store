@@ -21,6 +21,7 @@ const ProductCards = ({
     const temp = { id, title, text, rating, btn, img, price, color, shadow };
     dispatch(setAddItemToCart(temp));
   };
+  
   return (
     <>
       <div

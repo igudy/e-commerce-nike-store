@@ -1,10 +1,20 @@
 import {
   AiFillDelete,
 } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { setRemoveItemFromCart } from "../redux/slices/CartSlice";
 
 const CartItems = ({
   item: { id, title, text, img, color, shadow, price, cartQuantity },
 }) => {
+
+  const dispatch = useDispatch()
+
+  const removeFromCart = () => {
+    const temp = {id, title, text, img, price, color, shadow};
+    dispatch(setRemoveItemFromCart(temp))
+  }
+
   return (
     <div className="xsm:text-sm sm:text-sm">
       <div className="flex justify-between my-5 ">
@@ -67,7 +77,7 @@ const CartItems = ({
           <div className="grid gap-y-3 justify-items-center">
             <p>$3000</p>
             <div className="bg-theme-cart bg-theme-cart rounded w-6 h-6 flex items-center justify-center active:scale-90 cursor-pointer">
-              <AiFillDelete className="w-5 h-5 lg:w-8 lg:h-8 text-white stroke-[2]" />
+              <AiFillDelete className="w-5 h-5 lg:w-8 lg:h-8 text-white stroke-[2]" onClick={() => removeFromCart()}/>
             </div>
           </div>
         </div>
