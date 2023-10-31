@@ -7,7 +7,7 @@ const CartItems = ({
   item: { id, title, text, img, color, shadow, price, cartQuantity },
 }) => {
   return (
-    <div className="xsm:text-sm">
+    <div className="xsm:text-sm sm:text-sm">
       <div className="flex justify-between my-5 ">
         <div className="left-0">
           <div className="flex flex-row">
