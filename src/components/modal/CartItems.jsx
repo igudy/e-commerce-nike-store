@@ -1,8 +1,5 @@
 import {
   AiFillDelete,
-  AiFillMinusSquare,
-  AiFillPlusSquare,
-  AiOutlineDelete,
 } from "react-icons/ai";
 import { BsFillTrash3Fill } from "react-icons/bs";
 
@@ -10,8 +7,8 @@ const CartItems = ({
   item: { id, title, text, img, color, shadow, price, cartQuantity },
 }) => {
   return (
-    <div className="">
-      <div className="flex justify-between my-5">
+    <div className="xsm:text-sm">
+      <div className="flex justify-between my-5 ">
         <div className="left-0">
           <div className="flex flex-row">
             <img
