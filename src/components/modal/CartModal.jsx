@@ -9,8 +9,6 @@ import { selectCartItems } from "../redux/slices/CartSlice";
 
 const CartModal = ({ openModal, closeModal, isOpen }) => {
   const cartItems = useSelector(selectCartItems);
-  console.log(cartItems);
-
   return (
     <>
       <ShoppingBagIcon
@@ -43,7 +41,7 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                 leaveTo="translate-x-[100%] opacity-0"
               >
                 <Dialog.Panel className="w-full transform overflow-hidden h-screen bg-white text-left align-middle shadow-xl transition-all">
-                  <div className="mt-2 mx-4">
+                  <div className="mt-2 px-2">
                     <p className="flex justify-between text-md">
                       <div className="flex left-0 items-center">
                         <IoArrowBackOutline
@@ -80,9 +78,35 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                       {cartItems?.length === 0 ? (
                         <CartEmpty />
                       ) : (
-                        cartItems?.map((item, i) => (
-                          <CartItems key={i} item={item} />
-                        ))
+                        <>
+                          <div className="overflow-y-scroll scroll-smooth  scroll-style max-h-[calc(100vh-180px)]">
+                            {cartItems?.map((item, i) => (
+                              <CartItems key={i} item={item} />
+                            ))}
+                          </div>
+                          <div className="fixed bottom-0 w-full px-5 py-2 grid items-center">
+                            <div className="flex items-center justify-between">
+                              <h1 className="text-base font-semibold uppercase">
+                                SubTotal
+                              </h1>
+                              <h1 className="text-sm rounded bg-theme-cart justify-center text-center w-20 text-slate-100 py-0.5">
+                                $300
+                              </h1>
+                            </div>
+                            <div className="grid items-center gap-2">
+                              <p className="text-sm font-medium text-center">
+                                Taxes and shipping will be calculated at
+                                shipping.
+                              </p>
+                              <button
+                                type="button"
+                                className="button-theme bg-theme-cart text-white"
+                              >
+                                Checkout
+                              </button>
+                            </div>
+                          </div>
+                        </>
                       )}
                     </div>
                   </div>

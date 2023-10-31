@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import CartModal from "./modal/CartModal";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [navState, setNavState] = useState(false);
 
   const closeModal = () => {

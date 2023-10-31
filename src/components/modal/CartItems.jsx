@@ -10,14 +10,14 @@ const CartItems = ({
   item: { id, title, text, img, color, shadow, price, cartQuantity },
 }) => {
   return (
-    <>
+    <div className="">
       <div className="flex justify-between my-5">
         <div className="left-0">
           <div className="flex flex-row">
             <img
               src={img}
               alt="product5"
-              className={`relative bg-gradient-to-b ${color} ${shadow} rounded-xl py-2 xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out w-36 hover:scale-105 text-white sm:my-[0.5px] shadow-lg`}
+              className={`relative bg-gradient-to-b ${color} ${shadow} rounded-xl py-2 xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out w-36 hover:scale-95 text-white sm:my-[0.5px]`}
             />
             <div className=" mx-2 flex-col">
               <p className="font-bold">{title}</p>
@@ -71,7 +71,7 @@ const CartItems = ({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

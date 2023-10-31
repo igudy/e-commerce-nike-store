@@ -22,18 +22,19 @@
   .scroll-style::-webkit-scrollbar{
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: rgb(66, 245, 141) rgb(66, 245, 141); 
+    scrollbar-color: rgb(39, 44, 41) rgb(0, 0, 0); 
   }
   .scroll-style::-webkit-scrollbar{
     @apply w-2;
   }
   .scroll-style::-webkit-scrollbar-track {
-    @apply bg-slate-700;
+    @apply bg-slate-500;
   }
   .scroll-style::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-gradient-to-tr from-blue-500 to-green-500 via-teal-500;
+    @apply rounded-full bg-gradient-to-tr from-white to-purple-300
   }
    
+
   /* Theme-Colors */
   .bg-theme {
     background-image: linear-gradient( 0.2deg,  rgb(47, 47, 47) 4.8%, rgb(14, 14, 14) 85.5% );
