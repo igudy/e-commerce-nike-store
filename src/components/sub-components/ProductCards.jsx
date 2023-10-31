@@ -43,11 +43,11 @@ const ProductCards = ({
             <div className="flex items-center">
               <div className="border-[2px] w-7 h-6 cursor-pointer rounded-full drop-shadow-xl mr-[2px] text-inherit items-center">
                 <span className="flex text-center items-center justify-center">
-                  <BsFillCartCheckFill className="pt-1" />
+                  <BsFillCartCheckFill className="pt-1 hover:px-1" onClick={() => addTocart()}/>
                 </span>
               </div>
-              <span className="mt-1 pl-2 xl:text-md text-sm shadow-md cursor-pointer w-full bg-slate-200 text-black rounded-lg px-2 mx-[0.5px]">
-                <p className="text-center" onClick={() => addTocart()}>
+              <span className="mt-1 pl-2 xl:text-md text-sm shadow-md cursor-pointer w-full bg-slate-200 hover:text-white text-black rounded-lg px-2 mx-[0.5px] hover:bg-slate-700">
+                <p className="text-center">
                   {btn}
                 </p>
               </span>

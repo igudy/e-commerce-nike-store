@@ -23,6 +23,7 @@ const CartItems = ({
               <p>{text}</p>
               <div className="flex items-center gap-6">
                 <div className="bg-theme-cart bg-theme-cart rounded w-6 h-6  flex items-center justify-center active:scale-90 cursor-pointer">
+                  {/* Decrease(-) */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -42,6 +43,7 @@ const CartItems = ({
                   <span className="text-white">${price}</span>
                 </div>
                 <div className="bg-theme-cart bg-theme-cart rounded w-6 h-6  flex items-center justify-center active:scale-90 cursor-pointer">
+                  {/* Increase(+) */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

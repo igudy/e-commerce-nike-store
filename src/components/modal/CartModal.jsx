@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { IoArrowBackOutline } from "react-icons/io5";
+import {FiDelete} from 'react-icons/fi'
 import CartEmpty from "./CartEmpty";
 import CartItems from "./CartItems";
 import { useSelector } from "react-redux";
@@ -17,7 +18,7 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
         className="w-8 h-6 cursor-pointer"
       />
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-[999]" onClose={closeModal}>
+        <Dialog as="div" className="relative z-[999] sm:text-sm xsm:text-sm" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="transform transition-transform ease-out duration-600"
@@ -55,26 +56,13 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                           </span>
                         </span>
                       </div>
-                      <div className="right-0">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={1.5}
-                          stroke="currentColor"
-                          className="w-10 h-10 hover:text-slate-300 cursor-pointer"
-                          onClick={closeModal}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
+                      <div className="right-0 items-center flex gap-1 cursor-pointer border-2 rounded-full px-2 hover:text-gray-400">
+<p>Clear Cart</p><FiDelete />
+                  
                       </div>
                     </p>{" "}
                     {/* Cart Section */}
-                    <div className="mt-8 ">
+                    <div className="mt-8">
                       {cartItems?.length === 0 ? (
                         <CartEmpty />
                       ) : (
@@ -84,7 +72,7 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                               <CartItems key={i} item={item} />
                             ))}
                           </div>
-                          <div className="fixed bottom-0 w-full px-5 py-2 mb-16 grid items-center">
+                          <div className="fixed bottom-0 w-full px-5 py-2 xsm:mb-16 sm:mb-16 grid items-center">
                             <div className="flex items-center justify-between">
                               <h1 className="text-base font-semibold uppercase">
                                 SubTotal
