@@ -39,16 +39,16 @@
 //       localStorage.setItem("cart", JSON.stringify(state.cartItems));
 //     },
 
-//     setRemoveItemFromCart: (state, action) => {
-//       const removeItem = state.cartItems.filter(
-//         (item) => item.id !== action.payload.id
-//       );
+    setRemoveItemFromCart: (state, action) => {
+      const removeItem = state.cartItems.filter(
+        (item) => item.id !== action.payload.id
+      );
 
-//       state.cartItems = removeItem;
-//       localStorage.setItem("cart", JSON.stringify(state.cartItems));
+      state.cartItems = removeItem;
+      localStorage.setItem("cart", JSON.stringify(state.cartItems));
 
-//       toast.success(`${action.payload.title} Removed From Cart`);
-//     },
+      toast.success(`${action.payload.title} Removed From Cart`);
+    },
 
 //     setIncreaseItemQTY: (state, action) => {
 //       const itemIndex = state.cartItems.findIndex(

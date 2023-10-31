@@ -76,7 +76,6 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                       </div>
                     </p>{" "}
                     {/* Cart Section */}
-                    {/* Empty cart */}
                     <div className="mt-8 ">
                       {cartItems?.length === 0 ? (
                         <CartEmpty />
