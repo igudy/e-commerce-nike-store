@@ -16,21 +16,24 @@ const CartItems = ({
           <div className="flex flex-row">
             <img
               src={img}
-              alt="product5"
-              className={`relative bg-gradient-to-b ${color} ${shadow} rounded-xl py-2 xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out w-36 hover:scale-95 text-white sm:my-[0.5px]`}
+              alt={title}
+              className={`relative bg-gradient-to-b ${color} ${shadow} rounded-xl py-2 xsm:py-1 sm:py-2 px-3 transition-all duration-700 ease-in-out xsm:w-28 sm:w-28 w-40 hover:scale-95 text-white sm:my-[0.5px]`}
             />
-            <div className=" mx-2 flex-col">
-              <p className="font-bold">{title}</p>
+            <div className="ml-[-50px] mt-2 z-20 bg-gray-300 w-12 h-5 xsm:w-10 xsm:h-4 rounded-xl">
+            <p className="text-sm text-center justify-center xsm:text-[12px] xsm:mt-[-2px]">$150</p>
+            </div>
+            <div className="mx-2 xsm:ml-4 flex-col">
+              <p className="font-bold xsm:font-normal">{title}</p>
               <p>{text}</p>
               <div className="flex items-center gap-6">
-                <div className="bg-theme-cart bg-theme-cart rounded w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90 cursor-pointer">
+                <div className="bg-theme-cart bg-theme-cart rounded w-6 h-6  flex items-center justify-center active:scale-90 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-5 h-5 lg:w-4 lg:h-4 text-white stroke-[2]"
+                    className="w-5 h-5 text-white stroke-[2]"
                   >
                     <path
                       strokeLinecap="round"
@@ -39,17 +42,17 @@ const CartItems = ({
                     />
                   </svg>
                 </div>
-                <div className="bg-theme-cart bg-theme-cart rounded w-12 h-7 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90 cursor-pointer">
+                <div className="bg-theme-cart bg-theme-cart rounded w-12 h-7  flex items-center justify-center active:scale-90 cursor-pointer">
                   <span className="text-white">${price}</span>
                 </div>
-                <div className="bg-theme-cart bg-theme-cart rounded w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90 cursor-pointer">
+                <div className="bg-theme-cart bg-theme-cart rounded w-6 h-6  flex items-center justify-center active:scale-90 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-5 h-5 lg:w-4 lg:h-4 text-white stroke-[2]"
+                    className="w-5 h-5 text-white stroke-[2]"
                   >
                     <path
                       strokeLinecap="round"
@@ -63,9 +66,9 @@ const CartItems = ({
           </div>
         </div>
         <div className="right-0">
-          <div className="flex-col">
-            <p>Total Quantity</p>
-            <div className="bg-theme-cart bg-theme-cart rounded w-8 h-8 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90 cursor-pointer">
+          <div className="grid gap-y-3 justify-items-center">
+            <p>$3000</p>
+            <div className="bg-theme-cart bg-theme-cart rounded w-6 h-6 flex items-center justify-center active:scale-90 cursor-pointer">
               <AiFillDelete className="w-5 h-5 lg:w-8 lg:h-8 text-white stroke-[2]" />
             </div>
           </div>

@@ -79,7 +79,7 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                         <CartEmpty />
                       ) : (
                         <>
-                          <div className="overflow-y-scroll scroll-smooth  scroll-style max-h-[calc(100vh-180px)]">
+                          <div className="overflow-y-scroll scroll-smooth  scroll-hidden xsm:max-h-[calc(100vh-200px)] sm:max-h-[calc(100vh-200px)] max-h-[calc(100vh-180px)]">
                             {cartItems?.map((item, i) => (
                               <CartItems key={i} item={item} />
                             ))}
