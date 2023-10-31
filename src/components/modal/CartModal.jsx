@@ -79,12 +79,12 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                         <CartEmpty />
                       ) : (
                         <>
-                          <div className="overflow-y-scroll scroll-smooth  scroll-hidden xsm:max-h-[calc(100vh-200px)] sm:max-h-[calc(100vh-200px)] max-h-[calc(100vh-180px)]">
+                          <div className="overflow-y-scroll scroll-smooth  scroll-hidden xsm:max-h-[calc(100vh-230px)] sm:max-h-[calc(100vh-230px)] max-h-[calc(100vh-180px)]">
                             {cartItems?.map((item, i) => (
                               <CartItems key={i} item={item} />
                             ))}
                           </div>
-                          <div className="fixed bottom-0 w-full px-5 py-2 grid items-center">
+                          <div className="fixed bottom-0 w-full px-5 py-2 mb-10 grid items-center">
                             <div className="flex items-center justify-between">
                               <h1 className="text-base font-semibold uppercase">
                                 SubTotal
