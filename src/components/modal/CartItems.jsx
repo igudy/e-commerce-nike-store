@@ -1,7 +1,6 @@
 import {
   AiFillDelete,
 } from "react-icons/ai";
-import { BsFillTrash3Fill } from "react-icons/bs";
 
 const CartItems = ({
   item: { id, title, text, img, color, shadow, price, cartQuantity },
