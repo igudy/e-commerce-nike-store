@@ -34,9 +34,9 @@ const Navbar = () => {
     <div
       className={
         !navState
-          ? `flex flex-row justify-between items-center mx-14 py-8 xsm:mx-2 xsm:py-6 sm:mx-2 sm:py-8 md:mx-8 md:py-8`
-          : `flex flex-row justify-between items-center px-16 xsm:mx-2 xsm:py-6 sm:mx-2 sm:py-8 md:mx-8 md:py-8 fixed top-0 left-0 right-0 h-[9vh]  opacity-100 z-[999999] bg-black
-          `
+          ? `flex flex-row justify-between items-center mx-14 py-8 xsm:mx-2 xsm:py-6 sm:mx-2 sm:py-8 md:mx-8 md:py-8` : `flex flex-row justify-between items-center mx-14 py-8 xsm:mx-2 xsm:py-6 sm:mx-2 sm:py-8 md:mx-8 md:py-8`
+          // : `flex flex-row justify-between items-center px-16 xsm:mx-2 xsm:py-6 sm:mx-2 sm:py-8 md:mx-8 md:py-8 fixed top-0 left-0 right-0 h-[9vh]  opacity-100 z-[999999] bg-black
+          // `
       }
     >
       <div className="">
@@ -52,6 +52,7 @@ const Navbar = () => {
           closeModal={closeModal}
           isOpen={isOpen}
         />
+        
       </div>
     </div>
   );

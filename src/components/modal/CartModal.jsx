@@ -1,24 +1,49 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { IoArrowBackOutline } from "react-icons/io5";
-import {FiDelete} from 'react-icons/fi'
+import { FiDelete } from "react-icons/fi";
 import CartEmpty from "./CartEmpty";
 import CartItems from "./CartItems";
-import { useSelector } from "react-redux";
-import { selectCartItems } from "../redux/slices/CartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  selectCartItems,
+  selectTotalAmount,
+  selectTotalQuantity,
+  setClearItems,
+  setGetTotalAmount,
+} from "../redux/slices/CartSlice";
 
 const CartModal = ({ openModal, closeModal, isOpen }) => {
   const cartItems = useSelector(selectCartItems);
+  const dispatch = useDispatch();
+  const cartTotalQuantity = useSelector(selectTotalQuantity)
+
+  useEffect(() => {
+    dispatch(setGetTotalAmount())
+  },[cartItems, dispatch])
+
+  const totalAmount = useSelector(selectTotalAmount);
+
+  const clearCart = () => {
+    dispatch(setClearItems());
+  };
   return (
     <>
-      <ShoppingBagIcon
+    <ShoppingBagIcon
         type="button"
         onClick={openModal}
         className="w-8 h-6 cursor-pointer"
-      />
+      />    
+        {/* <span className="text-black justify-center text-center mt-4 ml-[] text-xs bg-white w-4 h-4 rounded-full">
+      <span className="font-medium">7</span>
+    </span> */}
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-[999] sm:text-sm xsm:text-sm" onClose={closeModal}>
+        <Dialog
+          as="div"
+          className="relative z-[999] sm:text-sm xsm:text-sm"
+          onClose={closeModal}
+        >
           <Transition.Child
             as={Fragment}
             enter="transform transition-transform ease-out duration-600"
@@ -52,13 +77,16 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                         <span className="ml-2">
                           Your cart
                           <span className="bg-black mx-2 rounded-lg text-white">
-                            <span className="px-3 py-3">1 item(s)</span>
+                            <span className="px-3 py-3">{cartTotalQuantity} item{cartTotalQuantity === 1 ? "" :"s"} </span>
                           </span>
                         </span>
                       </div>
-                      <div className="right-0 items-center flex gap-1 cursor-pointer border-2 rounded-full px-2 hover:text-gray-400">
-<p>Clear Cart</p><FiDelete />
-                  
+                      <div
+                        className="right-0 items-center flex gap-1 cursor-pointer border-2 rounded-full px-2 hover:text-gray-400"
+                        onClick={() => clearCart()}
+                      >
+                        <p>Clear Cart</p>
+                        <FiDelete />
                       </div>
                     </p>{" "}
                     {/* Cart Section */}
@@ -78,7 +106,7 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                                 SubTotal
                               </h1>
                               <h1 className="text-sm rounded bg-theme-cart justify-center text-center w-20 text-slate-100 py-0.5">
-                                $300
+                                ${totalAmount}
                               </h1>
                             </div>
                             <div className="grid items-center gap-2">
