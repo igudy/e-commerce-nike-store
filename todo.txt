@@ -1,0 +1,11 @@
+TODO
+- Design product details page
+- Add product details page
+- Sticky navbar
+- Small cart items on homepage for cart
+- Buy now to open modal
+- Popular sales responsive styling
+- Google authentication
+- Normal sign in and sign up
+- Checkout section
+- Live location to send the other to the persons house
